@@ -3,8 +3,8 @@ package edu.guilford;
 import java.util.Random;
 
 public class Rational {
-    int numerator;
-    int denominator;
+    private int numerator;
+    private int denominator;
 
     //Constructor that takes no arguments and sets the numberator to 0 and
     // demoninator to 1
@@ -13,8 +13,8 @@ public class Rational {
     public Rational() {
     try {
         Random rand = new Random();
-        int denominator = rand.nextInt( -101) + 201;
-        int numerator = rand.nextInt(-101) + 201;
+        numerator = rand.nextInt(201) - 100;
+        denominator = rand.nextInt( 200) - 100;
         while (denominator == 0) {
             denominator = rand.nextInt(-101)+201;
         }
@@ -83,7 +83,19 @@ public class Rational {
         }
     }
 
-
+    //Getters and Setters for numerator and denominator
+    public int getNumerator() {
+        return numerator;
+    }
+    public int getDenominator() {
+        return denominator;
+    }
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
 
    
 
